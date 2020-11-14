@@ -1,9 +1,9 @@
 import React from 'react'
 import "../App.css"
 import { useDispatch, useSelector } from "react-redux";
-import { increaseAction } from '../Redux'
-import { decreaseAction } from '../Redux'
-import { resetAction } from '../Redux'
+import { increaseAction } from './Redux/Actions'
+import { decreaseAction } from './Redux/Actions'
+import { resetAction } from './Redux/Actions'
 
 
 
@@ -16,12 +16,13 @@ export const Counter = () => {
     
 
     const decrement = () => {
+        
         dispatch((decreaseAction(state-1)))
     }
 
 
     const increament = () => {
-        dispatch((increaseAction(state+1)))
+        dispatch(increaseAction(state+1))
     }
 
 
